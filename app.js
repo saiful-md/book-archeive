@@ -44,7 +44,7 @@ const getBookDetails = (books) => {
         const error = document.getElementById('error');
         error.textContent = '';
         const errorContent = document.createElement('p');
-        errorContent.innerText = 'Please enter a relevent things...';
+        errorContent.innerText = 'No result found...';
         error.appendChild(errorContent);
 
     }
