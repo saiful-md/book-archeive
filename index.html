@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        #spinner{
+            display: none;
+        }
+        .bg-from-api{
+            background: rgba(0,0,0,0.1);
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <main>
+
+        <!-- This is heading content  -->
+        <section class="text-center text-black mt-5 ">
+            <h1 class="text-primary">Search some awsome books: </h1>
+        </section>
+      
+        
+        <!-- get user input field  -->
+        <section>
+            <div class="input-group my-5 w-50 mx-auto">
+                <input id="search-book-name" type="text" class="form-control border-dark bg-light" placeholder="Enter Books name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="getBook()" class="text-white btn btn-secondary btn-outline-info" type="button" id="button-addon2 get-book-name">Button</button>
+            </div>
+        </section>
+
+
+        <!-- display error massage -->
+        <section id="error" class="text-danger text-center"> 
+        </section>
+
+
+        <!-- display total books length  -->
+        <div id="total-books" class="my-5 w-75 mx-auto"> 
+        </div>
+
+
+        <!-- add spinner  -->
+        <div  class="d-flex justify-content-center">
+            <div id="spinner" class="spinner-border" role="status">
+            <span  class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+
+        <!-- display user input from api  -->
+        <section class="mx-4">
+            <div id="display-data" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- java script bootstrap link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- java script  our code link  -->
+    <script src="app.js"></script>
+</body>
+</html>
